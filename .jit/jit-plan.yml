@@ -1,11 +1,13 @@
-name: My plan
-level: beginner
 author: Jit
-version: 0.1
+items:
+- name: Analyze for Jit Context
+  uses: jitsecurity-controls/jit-plans/items/jit-context/item-jit-context-analysis.yml@latest
+level: beginner
+name: My plan
 owners:
   default: null
 references:
-  - https://www.jit.io
+- https://www.jit.io
 tags: []
-items: []
+version: 0.1
 
