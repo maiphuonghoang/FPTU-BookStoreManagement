@@ -15,8 +15,12 @@
     <name>LABIA Book Store Management</name>
     <description>Book Store Management Project</description>
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
+        <sonar.token>sqp_11fcf0b0baacdc3fcf7f2d137d21ea609c5ca964</sonar.token>
     </properties>
+    <!-- SonarQube Server
+    mvn clean verify sonar:sonar   -Dsonar.projectKey=Book-Management   -Dsonar.projectName='Book Management'   -Dsonar.host.url=http://localhost:9000   -Dsonar.token=sqp_11fcf0b0baacdc3fcf7f2d137d21ea609c5ca964
+     -->
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
