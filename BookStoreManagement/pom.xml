@@ -20,6 +20,7 @@
     </properties>
     <!-- SonarQube Server
     mvn clean verify sonar:sonar   -Dsonar.projectKey=Book-Management   -Dsonar.projectName='Book Management'   -Dsonar.host.url=http://localhost:9000   -Dsonar.token=sqp_11fcf0b0baacdc3fcf7f2d137d21ea609c5ca964
+    update sonar way default QG -> custom QG 
      -->
     <dependencies>
         <dependency>
