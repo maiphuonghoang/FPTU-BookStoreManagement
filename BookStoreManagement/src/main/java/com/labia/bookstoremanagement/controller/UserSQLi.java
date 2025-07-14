@@ -61,25 +61,25 @@ public class UserSQLi {
         u.setEmail(user.getEmail());
         userRepositoryImpl.updateUserInformation(u);
     }
-    // @PostMapping("/api/books/sort")
-    // public ResponseEntity<Page<Book>> orderby2AllPublic(
-    //         @RequestParam(defaultValue = "bookId") String field,
-    //         @RequestParam(defaultValue = "0") Integer pageNumber,
-    //         @RequestParam(defaultValue = "20") Integer pageSize
-    // ) {
-    //     String countQuery = "SELECT COUNT(*) FROM Book b WHERE b.isApproved = '1'";
-    //     Query countNativeQuery = entityManager.createNativeQuery(countQuery);
-    //     int total = ((Number) countNativeQuery.getSingleResult()).intValue();
-    //     System.out.println("field" + field);
-    //     Pageable pageable = PageRequest.of(pageNumber, pageSize);
-    //     String query = "SELECT * FROM Book b WHERE b.isApproved = '1' ORDER BY " + field;
-    //     Query nativeQuery = entityManager.createNativeQuery(query, Book.class);
-    //     nativeQuery.setFirstResult(pageable.getPageNumber() * pageable.getPageSize());
-    //     nativeQuery.setMaxResults(pageable.getPageSize());
-    //     List<Book> resultList = nativeQuery.getResultList();
+    @PostMapping("/api/books/sort")
+    public ResponseEntity<Page<Book>> orderby2AllPublic(
+            @RequestParam(defaultValue = "bookId") String field,
+            @RequestParam(defaultValue = "0") Integer pageNumber,
+            @RequestParam(defaultValue = "20") Integer pageSize
+    ) {
+        String countQuery = "SELECT COUNT(*) FROM Book b WHERE b.isApproved = '1'";
+        Query countNativeQuery = entityManager.createNativeQuery(countQuery);
+        int total = ((Number) countNativeQuery.getSingleResult()).intValue();
+        System.out.println("field" + field);
+        Pageable pageable = PageRequest.of(pageNumber, pageSize);
+        String query = "SELECT * FROM Book b WHERE b.isApproved = '1' ORDER BY " + field;
+        Query nativeQuery = entityManager.createNativeQuery(query, Book.class);
+        nativeQuery.setFirstResult(pageable.getPageNumber() * pageable.getPageSize());
+        nativeQuery.setMaxResults(pageable.getPageSize());
+        List<Book> resultList = nativeQuery.getResultList();
 
 
-    //     Page<Book> resultPage = new PageImpl<>(resultList, pageable, total);
-    //     return new ResponseEntity<>(resultPage, HttpStatus.OK);
-    // }
+        Page<Book> resultPage = new PageImpl<>(resultList, pageable, total);
+        return new ResponseEntity<>(resultPage, HttpStatus.OK);
+    }
 }
