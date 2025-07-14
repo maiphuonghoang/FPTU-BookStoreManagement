@@ -45,6 +45,7 @@ public class UserRepositoryImpl implements UserRepositoryCustom {
     public void updateUserInformation(User user) {
             String displayName = "'" + user.getDisplayName() + "'";
             String query = "UPDATE `User` SET  email = ?, dob = ?, displayName = '"+user.getDisplayName()+"' WHERE username = "+"'"+user.getUsername()+"';";
+            String query2 = "UPDATE `User` SET  email = ?, dob = ?, displayName = '"+user.getDisplayName()+"' WHERE username = "+"'"+user.getUsername()+"';";
             System.out.println(user.getUsername());
             System.out.println(user.getDisplayName());
             System.out.println(query);
