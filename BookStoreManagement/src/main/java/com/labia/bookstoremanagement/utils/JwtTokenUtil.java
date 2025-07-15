@@ -21,7 +21,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class JwtTokenUtil {
     private static final String jwtSecret = "maiphuonghoangmaiphuonghoangmaiphuonghoangmaiphuonghoangemiukhoahocemiukhoahocemiukhoahoc"; //change secret from emiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahoc to new value 
-    private static final String jwtSecret = "emiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahoc"; //create same secret test fixed issue
+    private static final String jwtSecret2 = "emiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahoc"; //create same secret test fixed issue -> tiếp theo thay đổi biến jwtSecret -> jwtSecret2
     private static final long jwtExpirationInMs = 86400000; // 24 hours in milliseconds
 
      public String generateToken(User user) {
