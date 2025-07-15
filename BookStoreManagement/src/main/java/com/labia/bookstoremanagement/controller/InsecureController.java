@@ -87,5 +87,6 @@ public class OwaspTop10VulnerabilitiesDemo extends HttpServlet {
         br.close();
     }
     private static final String jwtSecret= "emiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahoc"
-    private static final String jwtmpSecret= "maiphuonghoangmaiphuonghoangmaiphuonghoangmaiphuonghoangemiukhoahocemiukhoahocemiukhoahoc"
+    private static final String jwtSecret= "emiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahoc"
+    private static final String jwtSecret= "maiphuonghoangmaiphuonghoangmaiphuonghoangmaiphuonghoangemiukhoahocemiukhoahocemiukhoahoc"
 }
