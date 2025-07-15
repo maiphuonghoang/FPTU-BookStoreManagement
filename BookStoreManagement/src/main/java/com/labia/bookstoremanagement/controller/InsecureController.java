@@ -26,7 +26,7 @@ public class OwaspTop10VulnerabilitiesDemo extends HttpServlet {
     public List<String> getUserInfo(String username) throws SQLException {
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/test", "root", "password");
         Statement stmt = conn.createStatement();
-        String query = "SELECT * FROM users WHERE username = '" + username + "'"; // vulnerable to SQLi
+        String query = "SELECT * FROM users WHERE username.id = '" + username + "'"; // vulnerable to SQLi
         ResultSet rs = stmt.executeQuery(query);
         List<String> result = new ArrayList<>();
         while (rs.next()) {
@@ -86,7 +86,7 @@ public class OwaspTop10VulnerabilitiesDemo extends HttpServlet {
         System.out.println("Fetched: " + br.readLine());
         br.close();
     }
-    private static final String jwtSecret= "emiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahoc"
-
+    private static final String jwtSecret= "emiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahoc"
+ 
     private static final String jwtSecret= "maiphuonghoangmaiphuonghoangmaiphuonghoangmaiphuonghoangemiukhoahocemiukhoahocemiukhoahoc"
 }
