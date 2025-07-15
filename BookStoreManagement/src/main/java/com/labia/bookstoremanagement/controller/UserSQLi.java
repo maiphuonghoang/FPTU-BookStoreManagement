@@ -63,8 +63,8 @@ public class UserSQLi {
     }
     @PostMapping("/api/books/sort")
     public ResponseEntity<Page<Book>> orderby2AllPublic(
-        
-            @RequestParam(defaultValue = "bookId") String field,
+
+            @RequestParam(defaultValue = "bookId") String field_updated,
             @RequestParam(defaultValue = "0") Integer pageNumber,
             @RequestParam(defaultValue = "20") Integer pageSize
     ) {
