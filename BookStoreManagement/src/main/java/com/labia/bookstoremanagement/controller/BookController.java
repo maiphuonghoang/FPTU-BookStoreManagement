@@ -153,7 +153,7 @@ public class BookController {
     //test ignored issue with comment line 
     //line 153 -> 155
     public ResponseEntity<InputStreamResource> getFile(@PathVariable String fileId_update, HttpServletRequest request) throws IOException {
-        String filePath = "pdf/" + fileId + ".pdf";
+        String filePath = "pdf/" + fileId_update + ".pdf";
         File file = new File(filePath);
         InputStream inputStream = new FileInputStream(file);
         InputStreamResource inputStreamResource = new InputStreamResource(inputStream);
