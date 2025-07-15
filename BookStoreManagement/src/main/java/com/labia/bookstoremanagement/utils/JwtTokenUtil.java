@@ -20,7 +20,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class JwtTokenUtil {
-    private static final String jwtSecret = "maiphuonghoangmaiphuonghoangmaiphuonghoangmaiphuonghoang"; //change secret from emiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahoc to test-semgrep secret 
+    private static final String jwtSecret = "maiphuonghoangmaiphuonghoangmaiphuonghoangmaiphuonghoangemiukhoahocemiukhoahocemiukhoahoc"; //change secret from emiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahocemiukhoahoc to test-semgrep secret 
     private static final long jwtExpirationInMs = 86400000; // 24 hours in milliseconds
 
      public String generateToken(User user) {
