@@ -1,4 +1,4 @@
-// file orginal 
+// file new name
 import java.sql.*;
 import javax.servlet.http.*;
 import java.io.*;
