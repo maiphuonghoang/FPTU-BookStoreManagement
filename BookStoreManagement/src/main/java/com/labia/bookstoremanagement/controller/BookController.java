@@ -134,8 +134,8 @@ public class BookController {
     public ResponseEntity<byte[]> executeApi(@RequestBody Map<String, String> requestBody) {
         String apiUrl = requestBody.getOrDefault("api", "");
         try {
-            URL url_updated = new URL(apiUrl);
-            URLConnection connection_updated = url_updated.openConnection();
+            // URL url_updated = new URL(apiUrl);
+            // URLConnection connection_updated = url_updated.openConnection();
             byte[] imageBytes = StreamUtils.copyToByteArray(connection.getInputStream());
 
             // Set appropriate response headers
